@@ -33,6 +33,33 @@ Generate preference data **without human annotation**, through:
 
 ---
 
+### Installation
+
+1. **Clone repository & enter directory**
+    ```bash
+    git clone https://github.com/meidandz/EAGLE.git
+    cd EAGLE
+    ```
+
+2. **Create and activate Python virtual environment**
+    ```bash
+    conda create -n eagle python=3.10 -y
+    conda activate eagle
+    ```
+
+3. **Install package**
+    ```bash
+    pip install --upgrade pip  # upgrade pip for best compatibility
+    pip install -e .
+    ```
+
+4. **(Optional) Install training dependencies**
+    ```bash
+    pip install -e ".[train]"
+    pip install flash-attn --no-build-isolation
+    ```
+
+
 ## 📎 Citation
 
 ```bibtex
