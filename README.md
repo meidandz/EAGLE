@@ -1,6 +1,7 @@
-# EAGLE: Expert‑Guided Self‑Enhancement for Preference Alignment in Pathology Large Vision‑Language Models
+# (./assets/logo_eagle2.png)EAGLE: Expert‑Guided Self‑Enhancement for Preference Alignment in Pathology Large Vision‑Language Models
 
 [📄 ACL 2025 Paper](https://aclanthology.org/2025.acl-long.711.pdf)
+![EAGLE Framework](./assets/method-pipeline.jpg)
 
 **EAGLE** is a three-stage alignment framework designed to enhance Large Vision-Language Models (LVLMs) in pathology by leveraging expert-guided self-enhancement and preference data.
 
