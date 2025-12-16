@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🦅 EAGLE: Expert‑Guided Self‑Enhancement for Preference Alignment in Pathology
+#  EAGLE: Expert‑Guided Self‑Enhancement for Preference Alignment in Pathology
 
 
 [![Paper](https://img.shields.io/badge/Paper-ACL_2025-blue.svg)](https://aclanthology.org/2025.acl-long.711.pdf)
@@ -52,10 +52,10 @@
 Follow these steps to set up the environment:
 
 1. **Clone the Repository**
-```bash
-git clone [https://github.com/meidandz/EAGLE.git](https://github.com/meidandz/EAGLE.git)
-cd EAGLE
-```
+    ```bash
+    git clone [https://github.com/meidandz/EAGLE.git](https://github.com/meidandz/EAGLE.git)
+    cd EAGLE
+    ```
 
 2. **Create and activate Python virtual environment**
     ```bash
