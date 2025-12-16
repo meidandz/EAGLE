@@ -1,46 +1,62 @@
-# EAGLE: Expert‑Guided Self‑Enhancement for Preference Alignment in Pathology Large Vision‑Language Models
+<div align="center">
 
-[📄 ACL 2025 Paper](https://aclanthology.org/2025.acl-long.711.pdf)
+# 🦅 EAGLE: Expert‑Guided Self‑Enhancement for Preference Alignment in Pathology
+
+[**ACL 2025 Long Paper**](https://aclanthology.org/2025.acl-long.711.pdf)
+
+[![Paper](https://img.shields.io/badge/Paper-ACL_2025-blue.svg)](https://aclanthology.org/2025.acl-long.711.pdf)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-orange)](https://huggingface.co/Nandzy/EAGLE)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+
+<p align="center">
+  <strong>Expert-Guided Self-Enhancement for Preference Alignment in Pathology Large Vision-Language Models</strong>
+</p>
+
 ![EAGLE Framework](./assets/method-pipeline.jpg)
 
-**EAGLE** is a three-stage alignment framework designed to enhance Large Vision-Language Models (LVLMs) in pathology by leveraging expert-guided self-enhancement and preference data.
+</div>
 
 ---
 
-## 🔍 Overview
+## 📖 Overview
 
-### 1. Supervised Fine-Tuning (SFT)
-- Fine-tune a base LVLM (e.g., Vicuna + QuiltNet) using pathology-specific instruction data.
+**EAGLE** is a novel three-stage alignment framework designed to enhance Large Vision-Language Models (LVLMs) in the pathology domain. By leveraging expert-guided self-enhancement and automated preference data generation, EAGLE significantly improves model performance without relying on expensive human annotation.
 
-### 2. Self-Preference Creation
-Generate preference data **without human annotation**, through:
-- **Chosen Sampling**: Prompted outputs guided by expert knowledge.
-- **Rejected Sampling**: Created by controlled corruptions, including:
-  - **Entity Replacement**: Using medical Named Entity Recognition (NER).
-  - **Visual Masking**: Deliberate mislocalization or occlusion of critical image regions.
+### The Three-Stage Pipeline
 
-### 3. Preference-Following Tuning (PFT)
-- Apply **Direct Preference Optimization (DPO)** to:
-  - Reward preferred (chosen) outputs.
-  - Penalize corrupted (rejected) outputs.
-- Support **multi-round tuning** for iterative refinement.
+1.  **Supervised Fine-Tuning (SFT)**
+    * Fine-tunes a base LVLM (e.g., Vicuna + QuiltNet) using pathology-specific instruction data to establish a strong baseline foundation.
+
+2.  **Self-Preference Creation (Zero Human Annotation)**
+    Generates high-quality preference pairs through automated sampling:
+    * **✅ Chosen Sampling:** Prompted outputs guided by expert knowledge to ensure clinical relevance.
+    * **❌ Rejected Sampling:** Constructed via controlled corruptions to teach the model what *not* to do:
+        * *Entity Replacement:* utilizing medical Named Entity Recognition (NER).
+        * *Visual Masking:* simulating mislocalization or occlusion of critical image regions.
+
+3.  **Preference-Following Tuning (PFT)**
+    * Applies **Direct Preference Optimization (DPO)** to align the model with the generated preference pairs.
+    * Supports **multi-round tuning** for iterative refinement of faithfulness and localization.
 
 ---
 
 ## 💡 Key Contributions
-- Introduces a **scalable, expert-guided self-enhancement** pipeline.
-- Builds **pathology-specific preference pairs** with minimal human cost.
-- Improves **faithfulness, factual accuracy, and localization ability** in pathology VQA tasks.
+
+* 🚀 **Scalable Framework:** Introduces an expert-guided self-enhancement pipeline that scales efficiently.
+* 📉 **Minimal Cost:** Constructs pathology-specific preference pairs **without human annotation**.
+* 🏥 **Clinical Accuracy:** Significantly improves **faithfulness**, **factual accuracy**, and **localization ability** in pathology VQA tasks.
 
 ---
 
-### Installation
+## ⚙️ Installation
 
-1. **Clone repository & enter directory**
-    ```bash
-    git clone https://github.com/meidandz/EAGLE.git
-    cd EAGLE
-    ```
+Follow these steps to set up the environment:
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/meidandz/EAGLE.git](https://github.com/meidandz/EAGLE.git)
+cd EAGLE
+```
 
 2. **Create and activate Python virtual environment**
     ```bash
