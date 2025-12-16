@@ -2,11 +2,10 @@
 
 # 🦅 EAGLE: Expert‑Guided Self‑Enhancement for Preference Alignment in Pathology
 
-[**ACL 2025 Long Paper**](https://aclanthology.org/2025.acl-long.711.pdf)
 
 [![Paper](https://img.shields.io/badge/Paper-ACL_2025-blue.svg)](https://aclanthology.org/2025.acl-long.711.pdf)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-orange)](https://huggingface.co/Nandzy/EAGLE)
-[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+
 
 <p align="center">
   <strong>Expert-Guided Self-Enhancement for Preference Alignment in Pathology Large Vision-Language Models</strong>
@@ -52,7 +51,7 @@
 
 Follow these steps to set up the environment:
 
-### 1. Clone the Repository
+1. **Clone the Repository**
 ```bash
 git clone [https://github.com/meidandz/EAGLE.git](https://github.com/meidandz/EAGLE.git)
 cd EAGLE
